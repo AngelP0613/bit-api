@@ -26,7 +26,7 @@ app.get('/suma', (req, res) => {
 })
 app.get('/division', (req, res) => {
   // /suma?num1=25&&num2=25
-  let result = parseInt(req.query.num1) / parseInt(req.query.num2) //NaN
+  let result = parseFloat(req.query.num1) / parseFloat(req.query.num2) //NaN
   console.log(req.query)
 
   return res.status(200).json({result: result})
